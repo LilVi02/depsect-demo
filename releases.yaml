@@ -1,0 +1,4 @@
+releases:
+  - version: 1.1.0
+    date: 2026-02-01
+    changes: [First public release]

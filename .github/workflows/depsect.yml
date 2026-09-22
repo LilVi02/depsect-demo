@@ -1,0 +1,21 @@
+name: depsect
+on: pull_request
+
+jobs:
+  depsect:
+    # In a real project, limit this to bot PRs:
+    # if: github.actor == 'dependabot[bot]' || github.actor == 'renovate[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - uses: LilVi02/depsect@v0
+        with:
+          test-command: npm test

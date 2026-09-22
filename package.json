@@ -1,0 +1,19 @@
+{
+  "name": "relnotes",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tiny release-notes printer used to demo depsect.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.3.1",
+    "lodash": "^4.17.20",
+    "ms": "^2.1.2",
+    "semver": "^7.5.4",
+    "yaml": "^2.3.4"
+  }
+}
