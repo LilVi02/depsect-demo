@@ -7,7 +7,7 @@ jobs:
     # if: github.actor == 'dependabot[bot]' || github.actor == 'renovate[bot]'
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       pull-requests: write
     steps:
       - uses: actions/checkout@v5
@@ -16,6 +16,7 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-      - uses: LilVi02/depsect@v0
+      - uses: LilVi02/depsect@roadmap
         with:
           test-command: npm test
+          open-pr: true
