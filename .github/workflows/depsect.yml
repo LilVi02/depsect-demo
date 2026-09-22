@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-      - uses: LilVi02/depsect@roadmap
+      - uses: LilVi02/depsect@v0
         with:
           test-command: npm test
           open-pr: true
